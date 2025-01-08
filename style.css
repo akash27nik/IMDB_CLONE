@@ -1,0 +1,196 @@
+/* Movie Card Styling */
+.movie-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.movie-row:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-row img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-row .poster {
+  flex: 0 0 100px; /* Fixed width for small posters */
+  margin-right: 15px;
+}
+
+.movie-row .info {
+  flex: 1; /* Take remaining space */
+}
+
+.movie-row .actions {
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .movie-row {
+    flex-direction: column; /* Stack vertically on small screens */
+    align-items: center;
+  }
+
+  .movie-row .poster {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .movie-row .info {
+    text-align: center; /* Center text for small screens */
+  }
+}
+
+.logo {
+  width: 140px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+.btn {
+  font-size: 0.975rem; /* Standardizes button text size */
+  padding: 4px 8px; /* Sets consistent padding for all buttons */
+}
+
+.movie-row .poster img {
+  transition: transform 0.3s ease; /* Smooth scaling animation */
+}
+
+
+.movie-row .poster img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+/* Background image styling */
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: #ffffff; /* Ensures text is readable on a background */
+}
+
+/* Background image container */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('background.jpg'); 
+  background-size: cover; /* Ensures the image covers the viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  filter: blur(6px); /* Adds a blur effect */
+  opacity: 0.8; /* Makes the image faint */
+  z-index: -2; /* Keeps the background image behind the content and overlay */
+}
+
+/* Overlay for better text readability */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: -1; /* Keeps it behind all other content but above the image */
+}
+
+/* IMDb Logo Styling */
+.logo {
+  width: 140px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+}
+
+.btn {
+  font-size: 0.975rem;
+  padding: 4px 8px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Ensure buttons maintain a consistent size */
+.btn {
+  font-size: 0.875rem; /* Standardizes button text size */
+  padding: 5px 10px; /* Consistent padding for all buttons */
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Specific adjustments for medium screens (768px - 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+  .btn {
+    font-size: 0.85rem; /* Slightly smaller text for medium screens */
+    padding: 4px 8px; /* Adjust padding for medium screens */
+    margin-left: auto;
+  }
+
+}
+
+/* Ensure movie title and buttons are centered on medium screens */
+@media (max-width: 992px) and (min-width: 768px) {
+  .movie-row .info {
+    text-align: center; /* Center the movie title and details */
+  }
+
+  .movie-row .actions {
+    justify-content: center; /* Center the buttons */
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 767px) {
+  .actions {
+    justify-content: center !important; /* Center the buttons */
+    flex-direction: row; 
+    gap: 10px; /* Add spacing between buttons */
+  }
+
+  .actions .btn {
+    width: auto; /* Maintain button size */
+    font-size: 0.875rem; /* Ensure text size remains consistent */
+  }
+}
+
+/* Ensure pagination controls stay centered on all screen sizes */
+#pagination {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  align-items: center; /* Vertically align the buttons */
+  gap: 10px; /* Add consistent spacing between buttons */
+  flex-wrap: wrap; /* Allow wrapping on very small screens */
+  margin-top: 20px; /* Add some spacing from the content above */
+}
+
+@media (max-width: 768px) {
+  #pagination {
+    justify-content: center; /* Ensure they remain centered on smaller screens */
+  }
+}
+
+
+
+
+
+
