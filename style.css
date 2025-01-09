@@ -173,6 +173,14 @@ body::before {
   }
 }
 
+@media (max-width: 768px) {
+  .movie-row {
+      margin-left: auto;  /* Automatically adjust left margin */
+      margin-right: auto; /* Automatically adjust right margin */
+      max-width: 90%;     /* Optional: Limit the width for better centering */
+  }
+}
+
 /* Ensure pagination controls stay centered on all screen sizes */
 #pagination {
   display: flex;
