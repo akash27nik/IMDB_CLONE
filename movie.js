@@ -20,6 +20,7 @@ async function loadMovieDetails() {
         <p><strong>Year:</strong> ${movie.Year}</p>
         <p><strong>Genre:</strong> ${movie.Genre}</p>
         <p><strong>Director:</strong> ${movie.Director}</p>
+        <p><strong>Actors:</strong> ${movie.Actors}</p>
         <p><strong>Plot:</strong> ${movie.Plot}</p>
       </div>
     </div>
