@@ -1,4 +1,4 @@
-const apiKey = "8cce907e"; // OMDB API Key
+const apiKey = "8cce907e"; // IMDB API Key
 const searchBar = document.getElementById("searchBar"); // Search bar input
 const searchResults = document.getElementById("searchResults"); // Results container
 
